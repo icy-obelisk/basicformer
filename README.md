@@ -49,5 +49,5 @@ uv sync
 
 To test all models at once, run:
 ```bash
-uv run test/generate-raw.py
+uv run tests/generate-raw.py
 ```
