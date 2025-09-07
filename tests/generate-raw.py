@@ -51,12 +51,12 @@ print(f"Parameters: {sum(p.numel() for p in model.parameters() if p.requires_gra
 print("Without cache.")
 outputs = model.generate(**inputs, use_cache=False, max_new_tokens=20)
 
-print(tokenizer.batch_decode(outputs, skip_special_tokens=True, do_sample=False))
+print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
 
 print("With cache.")
 outputs = model.generate(**inputs, max_new_tokens=20)
 
-print(tokenizer.batch_decode(outputs, skip_special_tokens=True, do_sample=False))
+print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
 
 print("Start test for Seq2SeqLM.")
 
@@ -74,9 +74,9 @@ print(f"parameters: {sum(p.numel() for p in model.parameters() if p.requires_gra
 print("Without cache.")
 outputs = model.generate(**inputs, use_cache=False, max_new_tokens=20)
 
-print(tokenizer.batch_decode(outputs, skip_special_tokens=True, do_sample=False))
+print(tokenizer.batch_decode(outputs, skip_special_tokens=True))
 
 print("With cache.")
 outputs = model.generate(**inputs, max_new_tokens=20)
 
-print(tokenizer.batch_decode(outputs, skip_special_tokens=True, do_sample=False))
+print(tokenizer.batch_decode(outputs, skip_special_tokens=True))

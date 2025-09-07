@@ -334,7 +334,7 @@ class BasicFormerBlock(nn.Module):
 
 class BasicFormerPreTrainedModel(PreTrainedModel):
     config_class = BasicFormerConfig
-    base_model_prefix = "shift-former"
+    base_model_prefix = "basicformer"
 
     def __init__(self, config: BasicFormerConfig):
         super().__init__(config)
