@@ -15,6 +15,7 @@ The purpose of writing this BasicTransformer is, apparently, to serve as a bridg
 😓It lacks the following features:
 - [ ] Positional Encoding (wont fix, there are many implementations, better DIY.)
 - [ ] Tied weights between the input embedding layer and language model head.
+- [ ] Flash attention.
 
 ## 💻Backgrounds
 
@@ -34,11 +35,11 @@ During the writing of these models, I've encountered many problems, including bu
 - How & When to store self key/value cache?
 - How & When to store cross key/value cache?
 - When using key/value cache, how to slice the mask so that the mask shape won't mismatch with the shape of attention score?
-- Given the `update()` stragety of `DynamicCache`: When to update self key/value cache? When to update cross key/value cache?
+- Given the `update()` strategy of `DynamicCache`: When to update self key/value cache? When to update cross key/value cache?
 
 The answers apparently lie within the source code. Don't be afraid to read it—it's probably the most beginner-friendly Hugging Face-compatible model to read, thanks to abundant comments. 🤗
 
-# 🚀Usage
+## 🚀Usage
 
 Install [uv](https://docs.astral.sh/uv/getting-started/installation/) and a compatible [python](https://docs.astral.sh/uv/guides/install-python/). Version 3.12 has been tested; anything ≥3.10 should work. You can adjust `requires-python` in `pyproject.toml` and the `.python-version` file accordingly.
 
