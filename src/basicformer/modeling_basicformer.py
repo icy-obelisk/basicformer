@@ -64,7 +64,7 @@ class BasicFormerAttention(nn.Module):
         assert config.hidden_size % config.num_hidden_layers == 0, (
             "Hidden size should be divisible by head numbers!"
         )
-        self.attention_head_size = config.hidden_size / config.num_hidden_layers
+        self.attention_head_size = config.hidden_size // config.num_attention_heads
 
     # TODO: Implement Positional Encoding
 
